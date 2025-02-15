@@ -1,0 +1,18 @@
+backend:
+  name: git-gateway
+  branch: main  # Or "master", depending on your repo
+
+media_folder: "assets/uploads"  # Where images are stored in the repo
+public_folder: "/assets/uploads"  # Where images are publicly accessible
+
+collections:
+  - name: "posts"
+    label: "Blog Posts"
+    folder: "_posts"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    path: "_posts/{{year}}-{{month}}-{{day}}-{{slug}}.md"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Body", name: "body", widget: "markdown" }
