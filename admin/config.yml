@@ -1,6 +1,7 @@
 backend:
-  name: git-gateway
-  branch: main  # Or "master", depending on your repo
+  name: github
+  repo: your-username/blog-post-test  # Change to your actual GitHub repo
+  branch: main
 
 media_folder: "assets/uploads"  # Where images are stored in the repo
 public_folder: "/assets/uploads"  # Where images are publicly accessible
